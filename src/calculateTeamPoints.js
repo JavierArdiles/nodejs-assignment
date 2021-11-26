@@ -9,6 +9,7 @@ module.exports = (players) => {
   let red = 0;
   let green = 0;
   let blue = 0;
+
   for(let i = 0; i < players.length; i++){
     if(players[i].isActive){
       if(players[i].team === 'red') red += players[i].points;
@@ -16,25 +17,29 @@ module.exports = (players) => {
       else if(players[i].team === 'blue') blue += players[i].points;
     }
   }
-  let teamRed = {
+
+  const teamRed = {
     team: 'red',
     points: red
   };
-  let teamGreen = {
+  const teamGreen = {
     team: 'green',
     points: green
   };
-  let teamBlue = {
+  const teamBlue = {
     team: 'blue',
     points: blue
   };
+
   arr.push(teamRed);
   arr.push(teamGreen);
   arr.push(teamBlue);
-  let output = arr.sort((a,b) => {
+
+  const output = arr.sort((a,b) => {
     if(a.points > b.points) return -1;
     if(a.points < b.points) return 1;
     return 1;
   });
+  
   return output;
 }

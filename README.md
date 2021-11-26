@@ -1,32 +1,29 @@
 ## Node.js code challenge for engineering applicants - Team Points Project
 
-The purpose of this project is to give you an opportunity to showcase your
-coding style with node.js.
+To set up the test, first, clone this repository and open in your code editor.
+Open a terminal and run the folowing code:
 
-This is not meant to take longer than the typical 30 min code interview.
+```
+npm i
+``` 
+or 
+```
+npm install
+```
+After the installation is finished, run the test using this code in your terminal:
+```
+npm test
+```
+The output should include something like this:
+```
+PASS  src/__tests__/calculateTeamPoints.test.js
+  calculateTeamPoints(players)
+    √ Should return: [{team: "green", points: 40},{team: "red", points: 20},{team: "blue", points: 10}] (3ms)
 
-You can use any tools (IDE, npm, ...) and resources (google, stackoverflow,...) you use in your day to day.   
-However, _you_ should come up with the implementation on your own.
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.607s, estimated 1s
+Ran all test suites matching /calculateTeamPoints.test.js/i.
+```
 
-## Overview
-
-Every night we receive list of players with their: name, team, status, and points for the day.  
-We need a function that aggregates points by team, and sorts teams in descending order by total points.  
-Only active players should be considered for team points calculation.
-
-## Requirements
-
-* Code must be written using `standardjs` convention
-
-* Code should run in `Node 14.18.1`
-
-## Submitting the project
- * Clone this repo
- * Implement a working solution for `calculateTeamPoints`
- * Create a secret gist with the code for:
-    * `calculateTeamPoints.js`
-    * `calculateTeamPoints.test.js`
- * Submit the gist link to your PGA contact
- * Adding a README file for repo is mandatory and README should have steps to run code.
- * Only Javascript code will checked in code review. We are not concern about HTML styling.
- * You have to submit assignment within 3 days after you receive email for assignment.
